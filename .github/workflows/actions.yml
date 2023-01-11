@@ -15,7 +15,7 @@ jobs:
        run: npm test
        env:
          SQLITE_DB_LOCATION: /tmp/todo.db
-build_and_push:
+ build_and_push:
   runs-on: ubuntu-latest
   needs: test
   steps:
@@ -35,5 +35,5 @@ build_and_push:
         context: .
         push: true
         tags: |
-        ghcr.io/${{ github.repository }}:latest
-        ghcr.io/${{ github.repository }}:1.0.0
+          ghcr.io/${{ github.repository }}:latest
+          ghcr.io/${{ github.repository }}:1.0.0
